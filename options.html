@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BigQuery Cost Estimator Options</title>
+  </head>
+  <body>
+    <h1>BigQuery Cost Estimator Options</h1>
+
+    <div>
+      <label>
+        <input type="checkbox" id="enableUsd" />
+        Show USD (Base)
+      </label>
+    </div>
+
+    <hr />
+
+    <h2>Custom Currency (BRL Example)</h2>
+    <label>
+      <input type="checkbox" id="enableCustom" />
+      Enable Custom Currency
+    </label>
+    <br />
+    <label>
+      Symbol:
+      <input type="text" id="customSymbol" value="R$" />
+    </label>
+    <br />
+    <label>
+      Rate (relative to 1 USD):
+      <input type="number" step="0.01" id="customRate" value="4.90" />
+    </label>
+
+    <hr />
+
+    <button id="saveBtn">Save</button>
+    <p id="statusMessage"></p>
+
+    <script src="options.js"></script>
+  </body>
+</html>
