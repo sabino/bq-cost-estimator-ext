@@ -169,12 +169,13 @@ if (typeof browser === 'undefined') {
     /**
      * Fetch user preferences from storage, then start the observer.
      */
-    const defaultPrefs = {
-      showUSD: true,
-      customCurrencyEnabled: false,
-      customCurrencySymbol: "R$",
-      customCurrencyRate: 4.9
-    };
+      const defaultPrefs = {
+        showUSD: true,
+        customCurrencyEnabled: false,
+        customCurrencyCode: "BRL",
+        customCurrencySymbol: "R$",
+        customCurrencyRate: 4.9
+      };
   
     browser.storage.sync.get(defaultPrefs, (prefs) => {
       startObserver(prefs);
