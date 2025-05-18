@@ -5,8 +5,11 @@ A lightweight Chrome/Edge extension that calculates the estimated cost of your B
 ## Features
 
 - **Cost Calculation:** Automatically reads the displayed query size and applies a standard price per TB rate (default: \$6.25/TB).
-- **No Server Calls:** All cost calculations are performed locally; no data is transmitted to any external server.
+- **No Server Calls:** All cost calculations are performed locally; no query information leaves your browser. Exchange rates are retrieved only if you click **Update Rate**.
 - **Easy to Use:** Once installed, the Extension appends a simple cost estimate next to BigQuery’s own “Estimated to process…” text.
+- **Multilingual Options Page:** Interface text adapts to English, Portuguese or Spanish based on your browser language.
+- **Automatic Currency Updates:** Fetch conversion rates from the free [currency-api](https://github.com/fawazahmed0/exchange-api) with a single click—no tokens required.
+- **Custom Currency Support:** Still set your own currency code, symbol and rate if you prefer.
 
 ## Installation
 
@@ -14,7 +17,9 @@ A lightweight Chrome/Edge extension that calculates the estimated cost of your B
 2. **Go to** `chrome://extensions` (Chrome) or `edge://extensions` (Edge).
 3. **Enable** **Developer Mode** (usually found in the top-right corner).
 4. **Load Unpacked** and select the folder containing `manifest.json`.
-5. Reload the BigQuery Console. The cost estimate will appear automatically whenever the query size is displayed.
+5. When prompted, allow access to jsDelivr and currency-api.pages.dev so the extension can fetch rates.
+6. Reload the BigQuery Console. The cost estimate will appear automatically whenever the query size is displayed.
+7. Open the extension options to configure your currency. Click **Update Rate** to pull the latest exchange rate.
 
 ## Contributing
 
