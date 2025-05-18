@@ -29,6 +29,12 @@ A lightweight Chrome/Edge extension that calculates the estimated cost of your B
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a pull request describing your changes.
 
+## Development
+
+- `npm test` runs the unit tests.
+- `npm run build` packages the extension into `bq-cost-estimator.zip` which can
+  be uploaded to the Chrome Web Store.
+
 ## Support and Contact
 
 - If you encounter any issues or have suggestions, please open an issue on our [GitHub issues page](#).

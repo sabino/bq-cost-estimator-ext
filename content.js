@@ -2,21 +2,21 @@
 
 // If 'browser' is undefined, use 'chrome' instead (for Edge/Chrome compatibility).
 if (typeof browser === 'undefined') {
-    var browser = chrome;
-  }
-  
-  // Ensure we only run once
-  if (!window.bqCostObserverInitiated) {
-    window.bqCostObserverInitiated = true;
-  
-    // Constants for BigQuery size calculations
-    const TB_TO_BYTES = 1e12;
-    const GB_TO_BYTES = 1e9;
-    const MB_TO_BYTES = 1e6;
-    const KB_TO_BYTES = 1e3;
-  
-    // The official cost is ~$6.25 per TB for BigQuery on-demand (base in USD).
-    const COST_PER_TB_USD = 6.25;
+  var browser = chrome;
+}
+
+// Constants for BigQuery size calculations
+const TB_TO_BYTES = 1e12;
+const GB_TO_BYTES = 1e9;
+const MB_TO_BYTES = 1e6;
+const KB_TO_BYTES = 1e3;
+
+// The official cost is ~$6.25 per TB for BigQuery on-demand (base in USD).
+const COST_PER_TB_USD = 6.25;
+
+// Ensure we only run once
+if (!window.bqCostObserverInitiated) {
+  window.bqCostObserverInitiated = true;
   
     /**
      * Safely parse numeric strings with commas/dots in different locales.
@@ -181,4 +181,13 @@ if (typeof browser === 'undefined') {
       startObserver(prefs);
     });
   }
+
+// Export functions for testing in Node
+if (typeof module !== 'undefined') {
+  module.exports = {
+    parseNumberLocaleAware,
+    computeCostUSD,
+    generateCostDisplay,
+  };
+}
   

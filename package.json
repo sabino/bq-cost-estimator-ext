@@ -1,0 +1,10 @@
+{
+  "name": "bq-cost-estimator-ext",
+  "version": "1.2.0",
+  "description": "BigQuery Cost Estimator Chrome Extension",
+  "scripts": {
+    "test": "node --test",
+    "build": "zip -r bq-cost-estimator.zip background.js content.js options.js options.html manifest.json README.md LICENSE TERMS-OF-USAGE.md PRIVACY-POLICY.md"
+  },
+  "devDependencies": {}
+}
